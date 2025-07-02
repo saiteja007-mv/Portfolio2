@@ -1,24 +1,51 @@
 # Venkata Sai Teja Portfolio
 
-A modern, responsive portfolio website for Venkata Sai Teja, Data Analyst & AI Enthusiast.
+A modern, fully responsive portfolio website built from scratch to showcase my skills, projects, and professional journey as a Data Analyst & AI Enthusiast.
 
-## 🚀 Features
-- Beautiful hero section with animated code and data visualization
-- Timeline of education and experience with organization logos
-- Interactive, responsive skills grid with original logos
-- Featured work/projects with direct links
-- Animated, modern contact form with floating labels
-- Fully responsive and mobile-friendly
+---
 
-## 🛠️ Skills & Technologies
-- SQL, Python, Tableau, Power BI, Google BigQuery, Databricks, MS Excel, Snowflake, AWS
-- HTML5, CSS3, JavaScript (vanilla)
-- Font Awesome, SVG, and custom images
+## 🛠️ Tech Stack
+- **HTML5**: Semantic, accessible markup
+- **CSS3**: Custom styles, CSS Grid & Flexbox, dark mode, media queries
+- **JavaScript (Vanilla)**: Interactivity, animations, dynamic charts
+- **Font Awesome**: Iconography
+- **SVG & Custom Images**: For logos and data visualizations
+- **Netlify**: Deployment & hosting
 
-## 🌐 Live Demo
-[View the live site on Netlify](https://your-netlify-site.netlify.app)  <!-- Replace with your actual Netlify URL -->
+---
 
-## 📦 How to Run Locally
+## 📚 Project Overview
+This portfolio is designed to be:
+- **Visually impressive**: Modern UI, animated hero, interactive timeline, and glowing skill cards
+- **Mobile-first & responsive**: Looks great on all devices
+- **Showcase-focused**: Highlights my data, AI, and analytics skills, certifications, and featured work
+- **Easy to maintain**: No frameworks, just clean HTML, CSS, and JS
+
+---
+
+## ✨ Features
+- Animated hero section with code and data visualization
+- Timeline with organization logos (Accenture, UCM, SRKR)
+- Interactive skills grid with original tech logos and 3D/glow hover effects
+- Project cards with direct links
+- Animated, floating-label contact form
+- Fully responsive and accessible
+
+---
+
+## 🏗️ How I Built It
+- **Design**: Custom Figma wireframes, dark mode palette, and modern card-based layout
+- **Responsiveness**: CSS Grid/Flexbox, media queries for all breakpoints, mobile-first
+- **Animations**: CSS transitions, keyframes, and JS for typing/code/graph effects
+- **Skills Grid**: All logos are SVG/PNG, perfectly sized and centered with `object-fit: contain`
+- **Timeline**: Logos overlay timeline dots with z-index and flexbox for perfect alignment
+- **Contact Form**: Floating label animation, focus glow, and smooth transitions
+- **Accessibility**: Keyboard navigation, focus states, and semantic HTML
+- **Deployment**: Pushed to GitHub, deployed on Netlify for instant global access
+
+---
+
+## 🖥️ How to Run Locally
 1. Clone this repo:
    ```bash
    git clone https://github.com/YOUR-USERNAME/YOUR-REPO.git
@@ -26,20 +53,13 @@ A modern, responsive portfolio website for Venkata Sai Teja, Data Analyst & AI E
    ```
 2. Open `index.html` in your browser.
 
-## 🚀 Deploying to Netlify
-1. Push your code to GitHub.
-2. Go to [Netlify](https://app.netlify.com/) and connect your repo.
-3. Click **Deploy Site**. No build command needed (static site).
-4. Set a custom domain if desired.
+---
 
-## 📁 Folder Structure
-```
-├── images/                # All logos and images
-├── index.html             # Main HTML file
-├── styles.css             # Main CSS file
-├── script.js              # Main JS file
-├── README.md              # This file
-```
+## 🚀 Deployment
+- **Netlify**: Connect your GitHub repo and deploy (no build step needed)
+- **Custom Domain**: Set up in Netlify dashboard if desired
+
+---
 
 ## 📬 Contact
 - **Email:** saiteja.motukuri@icloud.com
