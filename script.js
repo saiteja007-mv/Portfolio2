@@ -505,6 +505,52 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+// Profile image 3D tilt effect
+document.addEventListener('DOMContentLoaded', () => {
+    const tiltContainer = document.getElementById('profile-tilt');
+    if (!tiltContainer) return;
+
+    const image = tiltContainer.querySelector('.profile-image');
+    const glare = tiltContainer.querySelector('.tilt-glare');
+
+    const maxRotate = 10; // degrees
+    const maxTranslateZ = 24; // px
+
+    function handleMove(e) {
+        const rect = tiltContainer.getBoundingClientRect();
+        const clientX = e.clientX ?? (e.touches && e.touches[0].clientX);
+        const clientY = e.clientY ?? (e.touches && e.touches[0].clientY);
+        if (clientX == null || clientY == null) return;
+
+        const x = clientX - rect.left;
+        const y = clientY - rect.top;
+        const px = (x / rect.width) - 0.5; // -0.5..0.5
+        const py = (y / rect.height) - 0.5;
+
+        const rotateY = (-px) * maxRotate;
+        const rotateX = (py) * maxRotate;
+
+        image.style.transform = `perspective(900px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateZ(${maxTranslateZ}px)`;
+
+        if (glare) {
+            const angle = Math.atan2(py, px) * (180 / Math.PI) + 90;
+            const dist = Math.min(1, Math.sqrt(px*px + py*py) * 2);
+            glare.style.opacity = 0.3 * dist;
+            glare.style.transform = `rotate(${angle}deg)`;
+        }
+    }
+
+    function resetTilt() {
+        image.style.transform = 'perspective(900px) rotateX(0deg) rotateY(0deg) translateZ(0)';
+        if (glare) glare.style.opacity = 0;
+    }
+
+    tiltContainer.addEventListener('mousemove', handleMove);
+    tiltContainer.addEventListener('mouseleave', resetTilt);
+    tiltContainer.addEventListener('touchmove', handleMove, { passive: true });
+    tiltContainer.addEventListener('touchend', resetTilt);
+});
+
 // Add smooth reveal for timeline items
 const timelineObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry, index) => {
